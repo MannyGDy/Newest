@@ -77,11 +77,11 @@ app.post('/submit', (req, res) => {
       if (err) {
         console.error('Failed to write submission:', err);
       }
-      return res.redirect(302, 'http://hotspot.cedarviewng.local');
+      return res.redirect(302, 'http://hotspot.cedarviewng.local/login?fromportal=1');
     });
   } catch (error) {
     console.error('Unexpected error handling submission:', error);
-    return res.redirect(302, 'http://hotspot.cedarviewng.local');
+    return res.redirect(302, 'http://hotspot.cedarviewng.local/login?fromportal=1');
   }
 });
 
